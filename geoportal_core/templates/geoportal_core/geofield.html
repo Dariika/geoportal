@@ -1,0 +1,19 @@
+<div class="form-group geofield">
+    {% if field.label %}
+      <label>
+        {{ field.label }}
+      </label>
+    {% endif %}
+  
+    <textarea style="display: none" name="{{ field.name }}" class="form-control">{% if field.value %}{{ field.value }}{% endif %}</textarea>
+
+    <div class="form-group geo-edit" geom_type="{{ geom_type }}">
+      <span class="status">Не выбрано</span>
+      <input type="button" class="add" value="+"></input>
+      <input type="button" class="edit" value="🖉"></input>
+      <input type="button" class="clear" value="✖"></input>
+    </div>
+    
+  
+    <span style="display: none" class="help-block"></span>
+  </div>

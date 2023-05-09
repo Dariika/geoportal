@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Выбор модуля</title>
+    </head>
+    <body>
+        {% for module in module_list %}
+        <div>
+            <h3><a href="{% url 'map' module.name %}">{{ module.alias }}</a></h3>
+            <p>{{ module.description }}</p>
+            <p><i>{{ module.owner_name }}</i></p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
